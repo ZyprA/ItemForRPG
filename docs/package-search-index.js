@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"net.zypr.itemForRPG"},{"l":"net.zypr.itemForRPG.CustomItem"},{"l":"net.zypr.itemForRPG.Others"},{"l":"net.zypr.itemForRPG.util"}];updateSearchResults();
