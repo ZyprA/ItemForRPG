@@ -1,0 +1,7 @@
+name: ItemForRPG
+version: '1.0-SNAPSHOT'
+main: net.zypr.itemForRPG.ItemForRPG
+api-version: '1.21'
+authors: [ ZyprA ]
+depend: [CommandAPI]
+description: A plugin that allows you to create RPG items with custom attributes and effects.

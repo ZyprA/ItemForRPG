@@ -1,0 +1,11 @@
+wanwan:
+  name: "test"
+  material: "DIAMOND_SWORD"
+  lore:
+    - hello
+    - world
+  commands:
+    player:
+      - "say hello"
+    console:
+      - "say hello"
