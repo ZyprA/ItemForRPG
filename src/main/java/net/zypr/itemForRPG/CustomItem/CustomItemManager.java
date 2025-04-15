@@ -56,9 +56,10 @@ public class CustomItemManager {
             String name = sections.getString("name", "§cUnknown Item");
             Material material = Material.getMaterial(sections.getString("material", "AIR"));
             String[] loreArray = sections.getStringList("lore").toArray(new String[0]);
+            int cooldown = sections.getInt("cooldown", 0);
             String[] playerCommands = sections.getStringList("commands.player").toArray(new String[0]);
             String[] consoleCommands = sections.getStringList("commands.console").toArray(new String[0]);
-            CustomItem customItem = new CustomItem(id, name, material, List.of(loreArray), List.of(playerCommands), List.of(consoleCommands));
+            CustomItem customItem = new CustomItem(id, name, material, List.of(loreArray),cooldown , List.of(playerCommands), List.of(consoleCommands));
             customItems.put(id, customItem);
         }
     }

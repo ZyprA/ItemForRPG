@@ -7,6 +7,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * A utility class for creating custom items in the RPG system.
@@ -81,6 +82,7 @@ public class CustomItemCreator {
                 NBTAPI.addNBT(itemStack, entry.getKey(), entry.getValue());
             }
         }
+        NBTAPI.addNBT(itemStack, "itemId", UUID.randomUUID().toString());
         ItemMeta meta = itemStack.getItemMeta();
         if (meta != null) {
             meta.setDisplayName(this.name);

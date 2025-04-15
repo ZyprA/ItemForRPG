@@ -1,6 +1,7 @@
 package net.zypr.itemForRPG;
 
 import lombok.Getter;
+import net.zypr.itemForRPG.CustomItem.Cooldown;
 import net.zypr.itemForRPG.CustomItem.CustomItemEventListner;
 import net.zypr.itemForRPG.CustomItem.CustomItemManager;
 import net.zypr.itemForRPG.Others.CommandRegister;
@@ -15,11 +16,18 @@ public final class ItemForRPG extends JavaPlugin {
     @Getter
     private static CustomItemManager customItemManager;
 
+    @Getter
+    private static Cooldown cooldownManager;
+
     @Override
     public void onEnable() {
         // Plugin startup logic
 
+        saveResource("items/test.yml", false);
+        saveResource("items/test2.yml", false);
+
         customItemManager = new CustomItemManager();
+        cooldownManager = new Cooldown();
         instance = this;
 
         customItemManager.loadFromConfig();

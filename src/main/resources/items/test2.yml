@@ -1,5 +1,5 @@
-supersword:
-  name: "§a§lスーパーソード"
+supersword2:
+  name: "§a§lスーパーソード2"
   material: "DIAMOND_SWORD"
   lore:
     - §cThis is super sword
@@ -7,12 +7,12 @@ supersword:
   cooldown: 10
   commands:
     player:
-      - "say 会心の一撃!!"
+      - "say 会心の一撃2!!"
     console:
       - "execute as %player% at %player% run execute as @e[distance=..10, type=!player] at @s run tp @s ~ ~10 ~"
 
-hellworld:
-  name: "§c§lハローワールドソード"
+hellworl2d:
+  name: "§c§lハローワールドソード2"
   material: "STONE_SWORD"
   lore:
     - §cThis is helloworld sword
@@ -20,6 +20,6 @@ hellworld:
   cooldown: 2
   commands:
     player:
-      - "say ハロー!!"
+      - "say ハロー!!ハロー!!"
     console:
-      - "say ハロー！"
+      - "say ハロー！ハロー！"

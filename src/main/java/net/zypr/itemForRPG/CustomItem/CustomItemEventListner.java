@@ -25,6 +25,10 @@ public class CustomItemEventListner implements Listener {
 
         ItemStack item = event.getItem();
         if (action != Action.RIGHT_CLICK_AIR && action != Action.RIGHT_CLICK_BLOCK) return;
+        if (ItemForRPG.getCooldownManager().isOnCooldown(item)) {
+            player.sendMessage("§cYou are on cooldown for this item.");
+            return;
+        }
         if (item == null) return;
         if (!item.hasItemMeta()) return;
         if (NBTAPI.hasNBT(item, "id")) {

@@ -46,6 +46,8 @@ public class CustomItem {
      */
     private List<String> consoleCommands;
 
+    private int cooldown;
+
     /**
      * Constructs a new CustomItem with the specified properties.
      *
@@ -56,11 +58,12 @@ public class CustomItem {
      * @param playerCommands  The commands executed by the player.
      * @param consoleCommands The commands executed by the console.
      */
-    public CustomItem(String id, String name, Material material, List<String> lore, List<String> playerCommands, List<String> consoleCommands) {
+    public CustomItem(String id, String name, Material material, List<String> lore, int cooldown, List<String> playerCommands, List<String> consoleCommands) {
         this.id = id;
         this.name = name;
         this.material = material;
         this.lore = lore;
+        this.cooldown = cooldown;
         this.playerCommands = playerCommands;
         this.consoleCommands = consoleCommands;
     }

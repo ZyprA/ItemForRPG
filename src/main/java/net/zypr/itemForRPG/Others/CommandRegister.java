@@ -3,10 +3,19 @@ package net.zypr.itemForRPG.Others;
 import dev.jorel.commandapi.CommandAPICommand;
 import dev.jorel.commandapi.CommandPermission;
 import dev.jorel.commandapi.arguments.ArgumentSuggestions;
+import dev.jorel.commandapi.arguments.GreedyStringArgument;
 import dev.jorel.commandapi.arguments.StringArgument;
 import net.zypr.itemForRPG.CustomItem.CustomItem;
 import net.zypr.itemForRPG.ItemForRPG;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CommandRegister {
     public static void load() {
@@ -92,5 +101,24 @@ public class CommandRegister {
                 §a/itemforrpg give <id> §7- Give the item with the specified id
                 §a/itemforrpg info <id> §7- Get information about the item with the specified id
                 """;
+    }
+
+    private static Map<String, List<String>> parseDSL(String input) {
+        Map<String, List<String>> result = new HashMap<>();
+
+        Pattern pattern = Pattern.compile("(\\w+)=\\\"(.*?)\\\"");
+        Matcher matcher = pattern.matcher(input);
+
+        while (matcher.find()) {
+            String key = matcher.group(1).toLowerCase();
+            String value = matcher.group(2);
+            result.computeIfAbsent(key, k -> new ArrayList<>()).add(value);
+        }
+        return result;
+    }
+
+    private String getLastToken(String input) {
+        String[] tokens = input.split(" ");
+        return tokens[tokens.length - 1]; // 最後のトークンを返す
     }
 }
