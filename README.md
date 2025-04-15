@@ -1,4 +1,5 @@
 ---
+
 #ItemForRPG プラグイン (Minecraft)
 
 ## 1. 概要
@@ -20,4 +21,5 @@ Spigot(Paper) 1.21.1
 
 ## 5. 開発者向け
 ###Document: [javadoc](https://zypra.github.io/ItemForRPG/)
+
 ---
