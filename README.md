@@ -8,8 +8,8 @@ ItemForRPGはコンフィグファイルで設定したRPG用のアイテムを�
 
 ## 2. コマンド(/itemforrpg)
 
-アイテムをゲット: /itemforrpg get <id>
-アイテムの情報を取得: /itemforrpg info <id>
+アイテムをゲット: /itemforrpg get <id>  
+アイテムの情報を取得: /itemforrpg info <id>  
 コンフィグをリロード: /itemforrpg reload
 
 ## 3. 必要なプラグイン
